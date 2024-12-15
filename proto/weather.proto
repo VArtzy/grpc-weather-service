@@ -28,6 +28,6 @@ message StationDiagnosticsResponse {
 
 service WeatherService {
     rpc GetWeatherStations(StationRequest) returns (stream WeatherStation) {}
-    rpc MonitorWeatherUpdate(WeatherStation) returns (stream WeatherData) {}
+    rpc MonitorWeatherUpdates(WeatherStation) returns (stream WeatherData) {}
     rpc ReportStationDiagnostics(stream WeatherData) returns (StationDiagnosticsResponse) {}
 }
